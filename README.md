@@ -8,39 +8,16 @@ Recognize page content of a PDF as text [Tesseract](https://github.com/charlesw/
 ## Installation
 * Clone or download this repository.
 * Open the solution in Visual Studio and run `Install-Package Tesseract -Version 3.0.2` from the `Package Manager Console`.
-* Download language data files for tesseract 3.04 from the [tessdata repository](https://github.com/tesseract-ocr/tessdata/archive/3.04.00.zip) and add them to the `tessdata` of your project. Set `Copy to output directory` to `Always` for all the copied files. You can copy only the language files you are interested in (e.g. all the files that starts with `eng` for English language).
+* Download language data files for tesseract 3.04 from the [tessdata repository](https://github.com/tesseract-ocr/tessdata/archive/3.04.00.zip) and add them to the `tessdata` folder of your project. Set `Copy to output directory` to `Always` for all the copied files. You can copy only the language files you are interested in (e.g. all the files that starts with `eng` for English language).
 
 ## Configuration
 
-##### Input PDF file
-*Variable name*: `inputPdfFile`.
-
-*Default*: `test.pdf`, included in the repository.
-
-*Description*: The PDF file whose selected page's content will be recognized as text.
-
-##### Page number
-*Variable name*: `pageNumber`.
-
-*Default*: `1`
-
-*Description*: The number of the page whose content will be recognized as text.
-
-##### Recognition language
-*Variable name*: `ocrLanguage`.
-
-*Default*: `"eng"`
-
-*Description*: The language used from tesseract to recognize text. When you change this value, make shure you add the language data files to the tessdata folder. See [Installation section](#Installation).
-
-
-##### DPI converting PDF page to image
-*Variable name*: `pdfToImageDPI`.
-
-*Default*: `150`
-
-*Description*: Tesseract can't recognize text from PDF pages. This is way we have to convert the PDF page to an image. This property indicates the DPI when making this convertion.
-
+|                                  | Variable name   | Default                                | Description                                                                                                                                                                                   |
+|----------------------------------|-----------------|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Input PDF file**                   | `inputPdfFile`  | `test.pdf`, included in the repository | The PDF file whose selected page's content will be recognized as text.                                                                                                                        |
+| **Page number**                    | `pageNumber`    | `1`                                    | The number of the page whose content will be recognized as text.                                                                                                                              |
+| **Recognition language**            | `ocrLanguage`   | `"eng"`                                | The language used from tesseract to recognize text. When you change this value, make shure you add the language data files to the tessdata folder. See [Installation section](#Installation). |
+| **DPI converting PDF page to image** | `pdfToImageDPI` | `150`                                  | Tesseract can't recognize text from PDF pages. This is way we have to convert the PDF page to an image. This property indicates the DPI when making this convertion.                          |
 
 ## Tesseract usage
 If you need more information on Tesseract usage, please visit [its own repository](https://github.com/charlesw/tesseract).
